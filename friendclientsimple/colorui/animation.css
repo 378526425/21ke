@@ -1,0 +1,907 @@
+/* 
+  Animation 微动画  
+  基于ColorUI组建库的动画模块 by 文晓港 2019年3月26日19:52:28
+ */
+
+/* css 滤镜 控制黑白底色gif的 */
+.gif-black{  
+  mix-blend-mode: screen;  
+}
+.gif-white{  
+  mix-blend-mode: multiply; 
+}
+
+
+/* Animation css */
+[class*=animation-] {
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both
+}
+
+.animation-fade {
+    animation-name: fade;
+    animation-duration: .8s;
+    animation-timing-function: linear
+}
+
+.animation-scale-up {
+    animation-name: scale-up
+}
+
+.animation-scale-down {
+    animation-name: scale-down
+}
+
+.animation-slide-top {
+    animation-name: slide-top
+}
+
+.animation-slide-bottom {
+    animation-name: slide-bottom
+}
+
+.animation-slide-left {
+    animation-name: slide-left
+}
+
+.animation-slide-right {
+    animation-name: slide-right
+}
+
+.animation-shake {
+    animation-name: shake
+}
+
+.animation-reverse {
+    animation-direction: reverse
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        opacity: 0;
+        transform: scale(.2)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes scale-down {
+    0% {
+        opacity: 0;
+        transform: scale(1.8)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes slide-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    10% {
+        transform: translateX(-9px)
+    }
+
+    20% {
+        transform: translateX(8px)
+    }
+
+    30% {
+        transform: translateX(-7px)
+    }
+
+    40% {
+        transform: translateX(6px)
+    }
+
+    50% {
+        transform: translateX(-5px)
+    }
+
+    60% {
+        transform: translateX(4px)
+    }
+
+    70% {
+        transform: translateX(-3px)
+    }
+
+    80% {
+        transform: translateX(2px)
+    }
+
+    90% {
+        transform: translateX(-1px)
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+/*
+	在App.vue全局引入common文件夹下的ycCss.css
+	为你想要效果的view添加class  ||  hover-class
+	插件地址: https://ext.dcloud.net.cn/plugin?id=1973
+*/
+
+
+.bubble {
+	border-radius: 50%;
+	background-color: #007AFF;
+	color: white;
+	text-align: center;
+	line-height: 60rpx;
+}
+
+
+.ycHide {
+	background: linear-gradient(270deg, var(--btnColor), var(--btnColor), var(--bgColor), var(--bgColor));
+	background-size: 300% 300%;
+	background-position: 99% 50%;
+	--bgColor: white;
+	--btnColor: #1AAD19;
+	color: var(--bgColor);
+	animation: ycHide 1s var(--count) ease both;
+	--count: infinite;
+}
+
+@keyframes ycHide {
+	0% {
+		background-position: 99% 50%;
+	}
+
+	100% {
+		background-position: 1% 50%;
+	}
+}
+
+
+@keyframes ycCart {
+	7% {
+		transform: scale(1, 1);
+	}
+
+	10% {
+		transform: scale(1, 0.8);
+	}
+
+	13% {
+		transform: scale(1, 1);
+	}
+
+	37% {
+		transform: scale(1, 1);
+	}
+
+	40% {
+		transform: scale(1, 0.8);
+	}
+
+	43% {
+		transform: scale(1, 1);
+	}
+}
+
+.ycCart {
+	transform-origin: bottom;
+	width: 30rpx;
+	height: 30rpx;
+	position: relative;
+	animation: ycCart 3s infinite ease;
+}
+
+@keyframes ycDrop {
+	0% {
+		top: -30%;
+		border-radius: 50%;
+		background-color: #fff;
+	}
+
+	3% {
+		top: 0;
+		border-radius: 50%;
+		background-color: #fff;
+	}
+
+	6% {
+		top: 30%;
+		height: 5rpx;
+		border-radius: 10rpx 10rpx 5rpx 5rpx;
+		transform: scaleX(1.7);
+	}
+
+	15% {
+		top: 10%;
+		height: 10rpx;
+		border-radius: 50%;
+		transform: scaleX(1);
+	}
+
+	30% {
+		top: 40%;
+		height: 10rpx;
+		opacity: 1;
+		border-radius: 50%;
+		transform: scaleX(1);
+		background-color: #fff;
+
+	}
+
+	31% {
+		opacity: 0;
+	}
+
+	33% {
+		top: -30%;
+		opacity: 0;
+	}
+
+	34% {
+		border-radius: 0;
+		background-color: #1C9FFF;
+		box-shadow: 0rpx 0rpx 10rpx 0rpx rgba(28, 159, 255, 0.4);
+		opacity: 1;
+		top: -30%;
+	}
+
+	40% {
+		top: 30%;
+		transform-origin: center bottom;
+		transform: scaleX(0.8) scaleY(1.4);
+	}
+
+	49% {
+		top: 10%;
+		transform-origin: center bottom;
+		transform: scaleX(1.3) scaleY(0.7);
+	}
+
+	64% {
+		top: 40%;
+		opacity: 1;
+		transform-origin: center top;
+		transform: scaleX(1) scaleY(1);
+	}
+
+	67% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+
+.ycDrop {
+	width: 10rpx;
+	height: 10rpx;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transform-origin: 50%;
+	animation: ycDrop 3s infinite ease;
+}
+
+
+
+@keyframes ycHeightSec {
+	100% {
+		background-position: right -40px top 0px;
+	}
+}
+
+.ycHeightSec {
+	position: relative;
+	overflow: hidden;
+}
+
+.ycHeightSec::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+	background-size: 40px 100%;
+	background-repeat: no-repeat;
+	background-position: left -40px top 0;
+	animation: ycHeightSec 1s ease infinite;
+}
+
+
+.ycHeight {
+	position: relative;
+	overflow: hidden;
+}
+
+.ycHeight::before {
+	content: '';
+	position: absolute;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+	width: 140%;
+	height: 80rpx;
+	left: 140%;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transform: rotateZ(-45deg);
+	animation: isLeft 5s 2.3s infinite;
+}
+
+@keyframes isLeft {
+	0% {
+		left: -140%;
+	}
+
+	12% {
+		left: 140%;
+	}
+
+	100% {
+		left: 140%;
+	}
+}
+
+
+/* 
+	<view wx:for="{{3}}" style="animation-delay:{{index+'s'}}" class="ycChevron" key="{{index}}" ></view>
+*/
+.ycChevron {
+	position: absolute;
+	width: 14px;
+	height: 4px;
+	opacity: 0;
+	transform: scale3d(0.5, 0.5, 0.5);
+	animation: move 3s ease-out infinite;
+}
+
+.ycChevron:before,
+.ycChevron:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	margin: auto;
+	height: 100%;
+	width: 51%;
+	background: #fff;
+}
+
+.ycChevron:before {
+	left: 0;
+	transform: skew(0deg, 30deg);
+}
+
+.ycChevron:after {
+	right: 0;
+	width: 50%;
+	transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+	25% {
+		opacity: 1;
+	}
+
+	33% {
+		opacity: 1;
+		transform: translateY(30px);
+	}
+
+	67% {
+		opacity: 1;
+		transform: translateY(40px);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+	}
+}
+
+
+@keyframes shockwave {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		box-shadow: 0 0 2px var(--color), inset 0 0 1px var(--color);
+		opacity: 1;
+	}
+
+	95% {
+		box-shadow: 0 0 50px var(--color), inset 0 0 30px var(--color);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: scale(2.25);
+		transform: scale(2.25);
+		opacity: 0;
+	}
+}
+
+.ycHot {
+	position: relative;
+	--color: rgba(0, 0, 0, 0.15);
+}
+
+.ycHot::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	animation: shockwave 3s 0.5s ease-out infinite;
+}
+
+.ycHot::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	animation: shockwave 3s 0.65s ease-out infinite;
+}
+
+@keyframes ycHover1 {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.ycHover1 {
+	--count: infinite;
+	animation: ycHover1 .3s var(--count) !important;
+}
+
+.ycShake {
+	transform-origin: center bottom;
+	animation: ycShake 2s 0.5s ease-out infinite;
+}
+
+@keyframes ycShake {
+	0% {
+		transform: rotate(0deg);
+		transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+	}
+
+	10% {
+		transform: rotate(-12deg);
+		transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+	}
+
+	20% {
+		transform: rotate(12deg);
+		transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+	}
+
+	28% {
+		transform: rotate(-10deg);
+		transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+	}
+
+	36% {
+		transform: rotate(10deg);
+		transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+	}
+
+	42% {
+		transform: rotate(-8deg);
+		transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+	}
+
+	48% {
+		transform: rotate(8deg);
+		transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+	}
+
+	52% {
+		transform: rotate(-4deg);
+		transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+	}
+
+	56% {
+		transform: rotate(4deg);
+		transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+	}
+
+	60% {
+		transform: rotate(0deg);
+		transition-timing-function: cubic-bezier(0.755, .5, .855, .06);
+	}
+
+	100% {
+		transform: rotate(0deg);
+		transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+	}
+}
+
+.ycHover2 {
+	z-index: 999;
+	position: relative;
+	--color: #ff0081;
+	--count: infinite;
+}
+
+.ycHover2::before,
+.ycHover2::after {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 140%;
+	height: 100%;
+	left: -20%;
+	z-index: -1000;
+	transition: all ease-in-out 0.5s;
+	background-repeat: no-repeat;
+}
+
+.ycHover2::before {
+	top: -55%;
+	background-image: radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--color) 20%, transparent 30%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--color) 15%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%);
+	background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+	animation: topBubbles ease-in-out 0.75s var(--count);
+	display: block;
+}
+
+.ycHover2::after {
+	bottom: -55%;
+	background-image: radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--color) 15%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%), radial-gradient(circle, var(--color) 20%, transparent 20%);
+	background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+	display: block;
+	animation: bottomBubbles ease-in-out 0.75s var(--count);
+}
+
+
+@keyframes topBubbles {
+	0% {
+		background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+		background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+	}
+
+	50% {
+		background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+		background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+	}
+
+	100% {
+		background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+		background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+	}
+}
+
+@keyframes bottomBubbles {
+	0% {
+		background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+		background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+	}
+
+	50% {
+		background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+		background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+	}
+
+	100% {
+		background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+		background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+	}
+}
+
+@keyframes ycHover3 {
+	0% {
+		transform: scale(1, 1);
+	}
+
+	33% {
+		transform: scale(1, 1.2);
+	}
+
+	66% {
+		transform: scale(1.2, 1);
+	}
+
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+.ycHover3 {
+	--count: infinite;
+	animation: ycHover3 .3s var(--count) !important;
+}
+
+.ycFly {
+	animation: ycFly 2s infinite alternate !important;
+}
+
+@keyframes ycFly {
+	100% {
+		transform: translateY(12%);
+	}
+}
+
+.ycHover4 {
+	border-bottom: 6rpx #F6BE3C solid;
+}
+
+.ycHover4:hover {
+	margin-top: 6rpx;
+	border-bottom: 0rpx #F6BE3C solid;
+}
+
+.ycRotate {
+	animation-name: ycRotate;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes ycRotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(1turn);
+	}
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.ycLive {
+	width: 10%;
+	height: 50%;
+	position: relative;
+	--color: white;
+	background-color: var(--color);
+	transform-origin: bottom;
+	animation: ycLive 0.6s 0.2s infinite ease-in-out;
+}
+
+.ycLive::after {
+	right: 200%;
+	animation: ycLive 0.6s 0.4s infinite ease-in-out;
+}
+
+.ycLive::before {
+	left: 200%;
+	animation: ycLive 0.6s 0s infinite ease-in-out;
+}
+
+.ycLive::after,
+.ycLive::before {
+	width: 100%;
+	height: 100%;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	background-color: var(--color);
+	transform-origin: bottom;
+}
+
+@keyframes ycLive {
+	0%,
+	100% {
+		transform: scaleY(1);
+	}
+
+	50% {
+		transform: scaleY(0.6);
+	}
+}
+
+.ycMusic {
+	position: relative;
+	--contentBefore: '♫';
+	--contentAfter: '♩';
+	--color: #000000;
+	--zIndex: 9999;
+	z-index: var(--zIndex);
+}
+
+.ycMusic::after,
+.ycMusic::before {
+	position: absolute;
+	left: -10%;
+	bottom: -30%;
+	color: var(--color);
+	z-index: calc(var(--zIndex) - 1);
+	opacity: 0;
+	transform: translateY(0) translateX(0) scale(0);
+}
+
+.ycMusic::after {
+	content: var(--contentAfter);
+	animation: ycMusic 2.5s 1.25s linear infinite;
+}
+
+.ycMusic::before {
+	content: var(--contentBefore);
+	animation: ycMusic 2.5s linear infinite;
+}
+
+@keyframes ycMusic {
+	0% {
+		transform: translateX(0) translateY(0) scale(0);
+		opacity: 0;
+	}
+
+	5% {
+		transform: translateY(0) translateX(0) scale(.6);
+		opacity: 1;
+	}
+
+	50% {
+		transform: translateX(-40rpx) translateY(-50rpx) scale(1);
+		opacity: 1;
+	}
+
+	90% {
+		transform: translateX(-50rpx) translateY(-100rpx) scale(1);
+		opacity: 0;
+	}
+
+	93% {
+		transform: translateX(-50rpx) translateY(-100rpx) scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0) translateY(0) scale(0);
+		opacity: 0;
+	}
+}
+
+
+.ycPortrait {
+	position: relative;
+	--color: #ff0081;
+}
+
+.ycPortrait::after,
+.ycPortrait::before {
+	position: absolute;
+	content: '';
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	box-sizing: border-box;
+	border: 1rpx solid var(--color);
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+
+.ycPortrait::after {
+	transform: scale(1.1);
+	animation: ycPortrait 0.8s linear infinite;
+}
+
+@keyframes ycPortrait {
+
+	0%,
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+
+	1% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	95% {
+		transform: scale(1.3);
+		opacity: 0;
+	}
+}
+
+@keyframes ycBeat {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.8);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.ycBeat {
+	animation: ycBeat 0.8s linear infinite;
+}

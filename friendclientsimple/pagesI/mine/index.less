@@ -1,0 +1,46 @@
+@boxSpacing : 20upx;
+@boxHeight : 80upx;
+@textFontSize: 28upx;
+
+.mine-wrap {
+    padding-top: @boxSpacing;
+    background: rgb(246, 246, 246);
+    box-sizing: border-box;
+
+    .action-box {
+        background: #fff;
+        font-size: @textFontSize;
+
+        .action-item {
+            height: @boxHeight;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5upx 0 20upx;
+            border-bottom: 2upx solid rgb(246, 246, 246);
+
+            .action-icon {
+                width: 50upx;
+                height: 50upx;
+            }
+        }
+    }
+
+    .action-tip {
+        font-size: @textFontSize;
+        color: #999;
+        padding-left: 20upx;
+    }
+
+    .action-logout {
+        height: @boxHeight;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FE7E97;
+    }
+
+    .boxMargin {
+        margin-top: @boxSpacing;
+    }
+}

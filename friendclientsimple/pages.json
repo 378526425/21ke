@@ -1,0 +1,301 @@
+/* 
+本下载插件为体验版，需要完整前后端加管理后台程序 可以加微信：MMRWXM  获取, 请备注uniapp
+完整版演示地址 https://www.wxmblog.com/cp/ 
+登录账号1：15261133552 密码：123456
+登录账号2：00000000010 密码：123456
+或自行注册
+本软件系统产品使用用途仅限于测试实验、研究学习娱乐为目的，禁止用于非法运营！使用此软件从事违法犯罪行为的与开源方无关
+仅提供参考学习使用！已经获得软著！
+商业使用需要支付源码授权费用 交付开源源码，支持二次开发,我们会提供搭建部署资料文档，无授权书商业使用追究法律责任！
+价格
+完整版前端（不含后端） 1000元
+全套（前端+后端+运营管理端）3000元
+ */
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				
+			}
+		},
+		{
+			"path": "pages/mine/index",
+			"style": {
+				
+			}
+		},
+		{
+			"path": "pages/game/game",
+			"style": {
+				
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+			"style": {
+				
+				"navigationBarBackgroundColor": "#000000"
+			}
+		}
+	    ,{
+            "path" : "pages/temppage/temppage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"subPackages": [{
+			"root": "pagesA",
+			"pages": [{
+				"path": "userinfo/userinfo",
+				"style": {
+					
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		},
+		{
+			"root": "pagesC",
+			"pages": [{
+				"path": "memberCenter/memberCenter",
+				"style": {
+					
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		},
+		{
+			"root": "pagesD",
+			"pages": [{
+				"path": "diary/details",
+				"style": {}
+			}]
+		},
+		{
+			"root": "pagesE",
+			"pages": [{
+				"path": "gamedetail/gamedetail",
+				"style": {
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		},
+		{
+			"root": "pagesF",
+			"pages": [{
+					"path": "gametypelist/gametypelist",
+					"style": {
+					
+						"enablePullDownRefresh": false
+					}
+
+				},
+				{
+					"path": "pushgame/pushgame",
+					"style": {
+						
+						"enablePullDownRefresh": false
+					}
+
+				}
+			]
+		},
+		{
+			"root": "pagesG",
+			"pages": [{
+				"path": "jubao/jubao",
+				"style": {
+					
+					"enablePullDownRefresh": false
+				}
+			}]
+		},
+		{
+			"root": "pagesH",
+			"pages": [{
+					"path": "login/login",
+					"style": {
+						
+					}
+				},
+				{
+					"path": "register/register",
+					"style": {}
+				},
+				{
+					"path": "resetpwd/resetpwd",
+					"style": {}
+				}, {
+					"path": "resetpwdmodel/resetpwdmodel",
+					"style": {}
+				},
+				{
+					"path": "step2/step2",
+					"style": {}
+				},
+				{
+					"path": "useragreement/useragreement",
+					"style": {
+						
+						"enablePullDownRefresh": false
+					}
+
+				}
+			]
+		},
+		{
+			"root": "pagesI",
+			"pages": [{
+					"path": "mine/timeLine",
+					"style": {
+						
+					}
+				},
+				{
+					"path": "mine/Setting",
+					"style": {
+						
+					}
+				}
+
+			]
+		},
+		{
+			"root": "pagesK",
+			"pages": [{
+					"path": "PrivacySet/PrivacySet",
+					"style": {}
+				},
+				{
+					"path": "ShowSet/ShowSet",
+					"style": {}
+				}
+			]
+		},
+		{
+			"root": "pagesL",
+			"pages": [{
+				"path": "push/push",
+				"style": {
+					
+				}
+			}]
+		},
+		{
+			"root": "pagesM",
+			"pages": [{
+				"path": "updatevalue/updatevalue",
+				"style": {}
+			}, {
+				"path": "updatevalue/updatetext",
+				"style": {}
+			}, {
+				"path": "updatevalue/updateheight",
+				"style": {}
+			}, {
+				"path": "updatevalue/updatestate",
+				"style": {}
+			}, {
+				"path": "updatevalue/updatetag",
+				"style": {
+					
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "updatevalue/addwenda",
+				"style": {
+				
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "updatevalue/addanswer",
+				"style": {
+					
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		}
+	],
+	"preloadRule": {
+	        "pages/list/index": {
+	            "network": "all",
+	            "packages": ["pagesB"]
+	        },
+			"pages/index/index": {
+			    "network": "all",
+			    "packages": ["pagesA"]
+			},
+			"pages/compass/index": {
+			    "network": "all",
+			    "packages": ["pagesD"]
+			}
+	    }
+	,
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "cp圈",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/icon/home_default.png",
+				"selectedIconPath": "static/icon/home_selected.png"
+			},
+			{
+				"pagePath": "pages/list/index",
+				"iconPath": "static/icon/list_default.png",
+				"selectedIconPath": "static/icon/list_selected.png"
+			},
+			/* {
+				"pagePath": "pages/activity/index",
+				"iconPath": "static/icon/disgame.png",
+				"selectedIconPath": "static/icon/game.png"
+			}, */
+			{
+				"pagePath": "pages/game/game",
+				"iconPath": "static/icon/disgame.png",
+				"selectedIconPath": "static/icon/game.png"
+			},
+			{
+				"pagePath": "pages/compass/index",
+				"iconPath": "static/icon/compass_default.png",
+				"selectedIconPath": "static/icon/compass_selected.png"
+			},
+			{
+				"pagePath": "pages/mine/index",
+				"iconPath": "static/icon/mine_default.png",
+				"selectedIconPath": "static/icon/mine_selected.png"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+	
+}
