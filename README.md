@@ -1,4 +1,3 @@
-# 仿探探 即时通讯 聊天 社交 陌生人交友 包含前后端全套源码 三端通用 开箱即用
 # 简介
 
    双向喜欢后配对聊天的交友app全套程序，后端基于java ssm 架构，缓存使用redis，即时通讯使用 websocket+netty,前端基于uniapp ,适配 app，小程序，h5端。实现功能包含有 交友卡片左右划，即时通讯， 聊天 ，社区， 个人中心，编辑资料，已对接微信公众号支付，内容合法性，人脸检测等，定位使用高德地图，用户所发文字和图片接入百度内容检测api，对非法内容进行检测，和识别用户上传图片是否为真人相册等。
@@ -19,7 +18,7 @@
 
 ![捕获12.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B712-708487b5e71b4449b5e32abdb6e70410.PNG)
 # 有关价格
-可以加微信：MMRWXM 咨询（绝对是同质量中最低了）, 请备注uniapp
+可以加微信：MMRWXM  咨询（绝对是同质量中最低了）, 请备注uniapp
 注明：购买后，仅限购买者自己使用！终身免费升级版本，如有问题可协助部署及修改。
 # 技术架构
 前端：uniapp uviewUI
@@ -62,4 +61,7 @@ PS：【承接各类APP、小程序、H5、等系统，可定制开发，请联�
 ## 用户端
 ![捕获.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B7-d40028f4106744d19c51019ff5d9c898.PNG)![捕获2.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B72-3d1caf84bde2478590f61aa81818c261.PNG)![捕获3.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B73-64de766f4cca4f1b8637109aa38e8507.PNG)![捕获4.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B74-0e5bbe50c5ea4a85b0fedd9b4f7d0362.PNG)![捕获5.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B75-912ead381911484098db3a6491da131d.PNG)![捕获7.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B77-cc343e451ca340eab195fc1f27b67ace.PNG)![捕获6.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B76-ab79fd67c95f4a6aaa8fa7e8c79eb4ae.PNG)![捕获8.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B78-e47d6a46b71c4d1fa946a13dfa4b525d.PNG)![捕获9.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B79-896ae1bd9ff74eefabf49dfcaca97cb2.PNG)![捕获11.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B711-addb429339ff48d78a918d7db90548a3.PNG)
 ## 运营管理端
-![捕获10.PNG](https://www.wxmblog.com/upload/2021/11/%E6%8D%95%E8%8E%B710-98a02685a4654ba7b448ae7b0450dd18.PNG)
+![捕获.PNG](https://www.wxmblog.com/upload/2022/01/%E6%8D%95%E8%8E%B7-34f981b68f2e4b5d94d4a684ca833c4f.PNG)
+![捕获1.PNG](https://www.wxmblog.com/upload/2022/01/%E6%8D%95%E8%8E%B71-c9d78d3d260e4046a834204bd41b5077.PNG)
+![捕获2.PNG](https://www.wxmblog.com/upload/2022/01/%E6%8D%95%E8%8E%B72-9d92f531a1984566a0b6b4c63f7d19f8.PNG)
+![捕获3.PNG](https://www.wxmblog.com/upload/2022/01/%E6%8D%95%E8%8E%B73-a3714171ed074567a6ba5cb416713832.PNG)
