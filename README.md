@@ -1,4 +1,4 @@
-`# 简介
+# 简介
 
 双向喜欢后配对聊天的交友app全套程序，后端基于springboot 架构，缓存使用redis，即时通讯使用 websocket+netty,前端基于uniapp ,适配 app，小程序，h5端。实现功能包含有 交友卡片左右划，即时通讯， 聊天 ，社区， 个人中心，编辑资料，已对接微信公众号支付，内容合法性，人脸检测等，定位使用高德地图，用户所发文字和图片接入百度内容检测api，对非法内容进行检测，和识别用户上传图片是否为真人相册等。
 # 程序
@@ -71,4 +71,4 @@ PS：【承接各类APP、小程序、H5、等系统，可定制开发，请联�
 ![捕获2.PNG](https://www.wxmblog.com/upload/2022/01/%E6%8D%95%E8%8E%B72-9d92f531a1984566a0b6b4c63f7d19f8.PNG)
 ![捕获3.PNG](https://www.wxmblog.com/upload/2022/01/%E6%8D%95%E8%8E%B73-a3714171ed074567a6ba5cb416713832.PNG)
 # 其他优秀开源项目推荐
-https://www.wxmblog.com/categories/open`
+https://www.wxmblog.com/categories/open
